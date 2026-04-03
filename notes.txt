@@ -184,3 +184,5 @@ Examples:
 ---
 
 🔥 **Next Step (Day 2):** Routing Architecture + Middleware Deep Dive
+
+In Node/Mongoose, the Model file actually does the job of both the Entity and the Repository.

@@ -8,9 +8,9 @@ export const searchTravel = async (req: Request, res: Response) => {
         const to = req.query.destination as string;
         const date = req.query.date as unknown as Date;
 
-        const type = req.path.includes('flights') ? 'flight' : 'trains';
+        const category = req.path.includes('flights') ? 'flight' : 'train';
 
-        const result = await searchEngine(TravelModel, {date}, [{field: 'origin', value: from}, {field: 'destination', value: to}]);
+        const result = await searchEngine(TravelModel, {category, date}, [{field: 'origin', value: from, limit: 2}, {field: 'destination', value: to, limit: 2}]);
 
         return res.status(200).json({
             success: true,

@@ -8,7 +8,8 @@ export const searchMovie = async (req: Request, res: Response) => {
         const city = req.query.city as string;
         const date = req.query.date as unknown as Date;
 
-        const result = await searchEngine(EntertainmentModel, {city, date}, [{field: 'movie_name', value: title}]);
+        const category = 'movie';
+        const result = await searchEngine(EntertainmentModel, {category, city, date}, [{field: 'movie_name', value: title, limit: 2}]);
 
         return res.status(200).json({
             success: true,
@@ -28,8 +29,9 @@ export const searchConcert = async (req : Request, res: Response) => {
         const artist_name = req.query.artist_name as string;
         const city = req.query.city as string;
         const date = req.query.date as unknown as Date;
-
-        const result = await searchEngine(EntertainmentModel, {city, date}, [{field: 'artist_name', value: artist_name}]);
+        
+        const category = 'concert';
+        const result = await searchEngine(EntertainmentModel, {category, city, date}, [{field: 'artist_name', value: artist_name, limit: 2}]);
 
         return res.status(200).json({
             success: true,

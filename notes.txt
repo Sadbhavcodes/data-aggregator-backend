@@ -186,3 +186,18 @@ Examples:
 🔥 **Next Step (Day 2):** Routing Architecture + Middleware Deep Dive
 
 In Node/Mongoose, the Model file actually does the job of both the Entity and the Repository.
+
+JWT AND COOKIES
+  Imagine a massive 3-day music festival with 5 different stages.
+
+  The Issue: If the festival used a traditional "Session" system, every time you wanted to enter a stage, the security guard would have to call the main office, give them your name, and wait for them to look you up in a giant paper book. With 50,000 people, the lines would be miles long.
+
+  The JWT Solution: They give you a Holographic Wristband (the JWT). It has your name and "VIP Access" printed on it.
+
+  The Cookie Solution: They put that wristband inside a Tamper-Proof Plastic Sleeve (the Cookie) that can only be opened/verified by official festival staff.
+
+  Why we use both:
+
+  We use the Wristband (JWT) so the guards at Stage A, Stage B, and the Food Tent don't have to call the main office. They just see the hologram and let you in.
+
+  We use the Plastic Sleeve (Cookie) so that a random person in the crowd can't easily slip the wristband off your arm and put it on theirs.
